@@ -7,7 +7,7 @@ function getDistance(pos1, pos2) {
 
 function getIssPosition() {
   //this returns a promise Because --request().then()--
-  return request('http://api.open-notify.org/iss-no.json')
+  return request('http://api.open-notify.org/iss-now.json')
   .then
   (
    //this is the call back function that will return co-ordinates
@@ -38,7 +38,7 @@ getIssPosition()
   (
     function(error) 
     {
-      console.log("File not found");
+      console.log("Invalid URL");
     }
   );
 
